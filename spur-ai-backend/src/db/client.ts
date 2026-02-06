@@ -7,6 +7,9 @@ console.log("🔄 Initializing PostgreSQL connection...");
 
 export const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false,
+  },
 });
 
 // Pool events (real pro stuff)
