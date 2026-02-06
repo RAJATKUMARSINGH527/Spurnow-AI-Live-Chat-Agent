@@ -18,7 +18,8 @@ console.log("✅ Middlewares registered (CORS, JSON)");
 
 // Connect Redis
 connectRedis();
-console.log("⚠️ Redis connection skipped (commented)");
+console.log("✅ Redis connection initiated");
+// console.log("⚠️ Redis connection skipped (commented)");
 
 // Routes
 app.use("/api/chat", (req, res, next) => {
