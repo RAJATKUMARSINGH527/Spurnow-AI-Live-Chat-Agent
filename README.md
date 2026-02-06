@@ -119,7 +119,7 @@ npm run dev
 - **Features**: Auto-scroll, typing indicator, send on Enter
 
 
-**LLM Integration Notes**
+## LLM Integration Notes
 
 **Provider**: OpenAI GPT-4
 
@@ -166,3 +166,16 @@ Store info:
 - .env file must contain valid `OpenAI API key`
 - Backend runs on `http://localhost:5000`
 - Frontend runs on `http://localhost:5173`
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🤝 Contact & Support
+
+**Project Lead**: Rajat Kumar Singh
+- Email: [rajatkumarsingh257@gmail.com](mailto:rajatkumarsingh257@gmail.com)  
+- GitHub: [RAJATKUMARSINGH527](https://github.com/RAJATKUMARSINGH527)  
+---
+
+© 2026 Spur AI Live Chat Agent. All rights reserved. Built with ❤️ for the Developer Community.
