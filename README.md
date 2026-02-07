@@ -1,6 +1,6 @@
 # Spurnow-AI-Live-Chat-Agent
 
-A simple web app that simulates a customer support chat where an AI agent answers user questions using OpenAI GPT-4. Built with **React + TypeScript + Tailwind CSS** on the frontend, and **Node.js + TypeScript + Express** on the backend. Messages are persisted in **PostgreSQL** and optionally cached in **Redis**.
+A simple web app that simulates a customer support chat where an AI agent answers user questions using Groq AI. Built with **React + TypeScript + Tailwind CSS** on the frontend, and **Node.js + TypeScript + Express** on the backend. Messages are persisted in **PostgreSQL** and optionally cached in **Redis**.
 
 ---
 
@@ -17,7 +17,7 @@ A simple web app that simulates a customer support chat where an AI agent answer
 | Backend      | Node.js + TypeScript + Express | REST API, message handling, LLM integration |
 | Database     | PostgreSQL | Persist conversations & messages |
 | Cache        | Redis (optional) | Speed up repeated queries, reduce LLM calls |
-| LLM          | OpenAI GPT-4 | Generate AI responses, context-aware |
+| LLM          | GROQ AI | Generate AI responses, context-aware |
 | HTTP Client  | Axios | Communicate frontend → backend |
 | Environment  | dotenv | API keys & DB connection (secrets) |
 
@@ -102,7 +102,7 @@ npm run dev
 
 - **Routes**: `/api/chat/message` → Handles incoming user messages
 
-- **Services**: `llmService.ts` → Wraps OpenAI GPT API call
+- **Services**: `llmService.ts` → Wraps Groq API call
 
 - **DB Layer**: `client.ts` → PostgreSQL queries
 
@@ -121,7 +121,7 @@ npm run dev
 
 ## LLM Integration Notes
 
-**Provider**: OpenAI GPT-4
+**Provider**: Groq AI
 
 **Prompt Design**:
 
@@ -163,7 +163,7 @@ Store info:
 ## Running Notes
 
 - Make sure `PostgreSQL` and `Redis` are running
-- .env file must contain valid `OpenAI API key`
+- .env file must contain valid `GROQ API key`
 - Backend runs on `http://localhost:5000`
 - Frontend runs on `http://localhost:5173`
 
