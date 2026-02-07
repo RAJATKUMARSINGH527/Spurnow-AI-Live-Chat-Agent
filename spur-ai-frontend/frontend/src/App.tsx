@@ -1,9 +1,3 @@
-
-
-
-  
-
-
 import { useState, useRef, useEffect } from "react";
 import axios from "axios";
 import { motion, AnimatePresence } from "framer-motion";
@@ -45,7 +39,7 @@ function App() {
     if (!sessionId) return;
     const fetchHistory = async () => {
       try {
-        const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+        const API_URL = import.meta.env.VITE_API_URL;
         const res = await axios.get<ChatHistoryResponse>(
           `${API_URL}/api/chat/history/${sessionId}`,
         );
@@ -76,7 +70,7 @@ function App() {
     setInput("");
 
     try {
-      const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+      const API_URL = import.meta.env.VITE_API_URL;
       const res = await axios.post(`${API_URL}/api/chat/message`, {
         message: input,
         sessionId,
